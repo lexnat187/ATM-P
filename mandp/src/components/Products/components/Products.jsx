@@ -62,8 +62,10 @@ class Products extends Component {
                 return <ProductItem image={product.image} name={product.name} price={product.price} />
             }
         })
+    } else {
+        productsToRender = ("...No Results...")
     }
-    
+
     return productsToRender
   }
 
