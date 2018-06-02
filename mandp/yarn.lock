@@ -189,7 +189,7 @@
 
 "ATCOMMON@https://github.com/lexnat187/ATCOMMON.git":
   version "1.0.0"
-  resolved "https://github.com/lexnat187/ATCOMMON.git#4e30a600e3a6cb9e3dfe7bb4cdbf93493e7bee8f"
+  resolved "https://github.com/lexnat187/ATCOMMON.git#285ba2f608b776f3cab81338bbbae5e909cc2925"
   dependencies:
     "@material-ui/core" "^1.1.0"
     prop-types "^15.6.1"

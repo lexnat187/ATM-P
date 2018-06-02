@@ -5,11 +5,11 @@ import { routerReducer } from 'react-router-redux'
 import thunk from 'redux-thunk'
 
 // import SearchBar from 'ATCOMMON/src/components/Search'
-import { SearchBar } from 'ATCOMMON'
+// import { SearchBar } from 'ATCOMMON'
 
 import { search } from './actions'
 
-import SearchBarOLD from './components/Search'
+import SearchBar from './components/Search'
 import Filters from './components/Filters'
 import Products from './components/Products'
 
@@ -43,7 +43,8 @@ class App extends Component {
             <img src={logo} className="App-logo" alt="logo" />
             <h1 className="App-title">Welcome to React</h1>
           </header>
-          <SearchBar search={search}/>
+          {/* <SearchBar search={search}/> */}
+          <SearchBar />
           <Filters />
           <Products />
         </div>

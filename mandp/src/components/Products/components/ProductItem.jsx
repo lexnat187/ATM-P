@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+//TODO this needs extracted to config file
 const baseURL = 'https://prod2.atgcdn.ae/small_light(p=listing2x,of=webp)/pub/media/catalog/product/'
 
 const STYLES = {
