@@ -5,8 +5,7 @@ import {
   GET_SEARCH_FAILURE
 } from './types'
 
-const baseURL = 'http://localhost:3003/'
-const brand = 'mandpsearch'
+import { baseAPIURL, brandSearch } from '../config'
 
 function getSearchRequest (search, colour) {
   return {
@@ -33,20 +32,26 @@ function getSearchFailure (message) {
   }
 }
 
+function toTitleCase(str) {
+  return str.replace(/\w\S*/g, function(txt){
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()
+  })
+}
+
 export function search (search, colour)  {
   return (dispatch, getState) => {
     dispatch(getSearchRequest(search, colour))
 
     const payload = {
-      search,
-      colour
+      search: toTitleCase(search),
+      colour: toTitleCase(colour)
     }
 
     let myHeaders = new Headers()
 
     myHeaders.append('Content-Type', 'application/json')
 
-    return fetch( `${baseURL}search/${brand}`,
+    return fetch( `${baseAPIURL}search/${brandSearch}`,
       {
           method: 'POST',
           headers: myHeaders,

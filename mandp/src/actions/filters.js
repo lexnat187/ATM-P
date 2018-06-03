@@ -5,8 +5,7 @@ import {
   GET_FILTER_FAILURE
 } from './types'
 
-const baseURL = 'http://localhost:3003/'
-const brand = 'mandpfacets'
+import { baseAPIURL, brandFacets } from '../config'
 
 function getFilterRequest () {
   return {
@@ -35,7 +34,7 @@ export function getFilters ()  {
   return (dispatch, getState) => {
     dispatch(getFilterRequest())
     
-    return fetch( `${baseURL}search/${brand}`,
+    return fetch( `${baseAPIURL}search/${brandFacets}`,
             {
                 method: 'GET',
                 headers: {
