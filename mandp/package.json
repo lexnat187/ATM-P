@@ -1,6 +1,7 @@
 {
   "name": "mandp",
   "version": "0.1.0",
+  "author": "Alexander Walker",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^1.1.0",
