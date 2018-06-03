@@ -23,6 +23,13 @@ The app will automatically spool up and open a webpage using the following comma
 yarn start
 ```
 
+## Docker
+
+This repositories have been dockerised and can be built by running the docker build command within the mandp directory
+
+```
+docker build --file ./Dockerfile.production --tag at-mandp .
+```
 
 ## Author
 
