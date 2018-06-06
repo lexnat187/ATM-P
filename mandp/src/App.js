@@ -4,8 +4,6 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import { routerReducer } from 'react-router-redux'
 import thunk from 'redux-thunk'
 
-import { search } from './actions'
-
 import SearchBar from './components/Search'
 import Filters from './components/Filters'
 import Products from './components/Products'
